@@ -12,7 +12,8 @@ title: Writing Your First End-to-End Test
 
 </Alert>
 
-<DocsVideo src="https://vimeo.com/237115455"></DocsVideo>
+<!--TODO: replace with v10 version -->
+<!--<DocsVideo src="https://vimeo.com/237115455"></DocsVideo>-->
 
 ## Add a test file
 
@@ -22,7 +23,7 @@ and
 [opened the Cypress app](/guides/getting-started/installing-cypress#Opening-Cypress),
 now it's time to write our first test. We're going to:
 
-1. Create a `sample.cy.js` file.
+1. Create an empty `sample.cy.js` file.
 2. Watch Cypress update our list of specs.
 3. Launch the Cypress App.
 
@@ -33,8 +34,8 @@ touch {your_project}/cypress/e2e/sample.cy.js
 ```
 
 Once we've created that file, we should see the Cypress App immediately display
-it in the list of Integration Tests. Cypress monitors your spec files for any
-changes and automatically displays any changes.
+it in the list of spec files. Cypress monitors your spec files for any changes
+and automatically displays any changes.
 
 Even though we haven't written any tests yet - that's okay - let's click on
 `sample.cy.js` and watch Cypress launch your browser.

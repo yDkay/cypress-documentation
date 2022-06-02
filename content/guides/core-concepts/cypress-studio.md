@@ -7,8 +7,10 @@ title: Cypress Studio
 <strong class="alert-header"><Icon name="exclamation-triangle"></Icon>
 Removed</strong>
 
-Cypress Studio has been removed in Cypress v10 and will be rethought/revisited
-in a later release. This page is for reference only.
+Cypress Studio has been
+[removed in Cypress v10](https://github.com/cypress-io/cypress/discussions/21561)
+and will be rethought/revisited in a later release. This page is for reference
+only.
 
 </Alert>
 

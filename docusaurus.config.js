@@ -18,7 +18,7 @@ const config = {
   tagline: '',
   url: 'https://docs.cypress.io',
   baseUrl: '/',
-  onBrokenLinks: 'warn', // TODO: update this to throw when we go live to production
+  onBrokenLinks: 'throw', // TODO: update this to throw when we go live to production
   onBrokenMarkdownLinks: 'warn',
   favicon: undefined,
 

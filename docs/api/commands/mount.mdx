@@ -7,7 +7,7 @@ componentSpecific: true
 
 Cypress does not have a built-in `cy.mount()` command. The command must be set
 up in your support file. By default, when you use the Cypress app to
-[configure](guides/component-testing/component-framework-configuration#Automatic-Configuration-Recommended)
+[configure](/guides/component-testing/diving-deeper/component-framework-configuration#automatic-configuration-setup)
 your project, one will be automatically scaffolded for you.
 
 This guide covers how to customize the `cy.mount()` command to fit the needs of
@@ -40,26 +40,26 @@ to start with for your commands:
 <TabItem value='React'>
 
 ```js
-import { mount } from "cypress/react";
+import { mount } from 'cypress/react'
 
-Cypress.Commands.add("mount", (component, options) => {
+Cypress.Commands.add('mount', (component, options) => {
   // Wrap any parent components needed
   // ie: return mount(<MyProvider>{component}</MyProvider>, options)
-  return mount(component, options);
-});
+  return mount(component, options)
+})
 ```
 
 </TabItem>
 <TabItem value='Vue 2'>
 
 ```js
-import { mount } from "cypress/vue-2";
+import { mount } from 'cypress/vue-2'
 
-Cypress.Commands.add("mount", (component, options = {}) => {
+Cypress.Commands.add('mount', (component, options = {}) => {
   // Setup options object
-  options.extensions = options.extensions || {};
-  options.extensions.plugins = options.extensions.plugins || [];
-  options.extensions.components = options.extensions.components || {};
+  options.extensions = options.extensions || {}
+  options.extensions.plugins = options.extensions.plugins || []
+  options.extensions.components = options.extensions.components || {}
 
   /* Add any global plugins */
   // options.global.plugins.push({
@@ -71,23 +71,23 @@ Cypress.Commands.add("mount", (component, options = {}) => {
   /* Add any global components */
   // options.global.components['Button'] = Button;
 
-  return mount(component, options);
-});
+  return mount(component, options)
+})
 ```
 
 </TabItem>
 <TabItem value='Vue 3'>
 
 ```js
-import { mount } from "cypress/vue";
+import { mount } from 'cypress/vue'
 
-Cypress.Commands.add("mount", (component, options = {}) => {
+Cypress.Commands.add('mount', (component, options = {}) => {
   // Setup options object
-  options.global = options.global || {};
-  options.global.stubs = options.global.stubs || {};
-  options.global.stubs["transition"] = false;
-  options.global.components = options.global.components || {};
-  options.global.plugins = options.global.plugins || [];
+  options.global = options.global || {}
+  options.global.stubs = options.global.stubs || {}
+  options.global.stubs['transition'] = false
+  options.global.components = options.global.components || {}
+  options.global.plugins = options.global.plugins || []
 
   /* Add any global plugins */
   // options.global.plugins.push({
@@ -99,8 +99,8 @@ Cypress.Commands.add("mount", (component, options = {}) => {
   /* Add any global components */
   // options.global.components['Button'] = Button;
 
-  return mount(component, options);
-});
+  return mount(component, options)
+})
 ```
 
 </TabItem>
@@ -121,7 +121,7 @@ example as a starting point for customizing your own command:
 <TabItem value='React'>
 
 ```ts
-import { MountOptions, MountReturn } from "cypress/react";
+import { MountOptions, MountReturn } from 'cypress/react'
 
 declare global {
   namespace Cypress {
@@ -134,7 +134,7 @@ declare global {
       mount(
         component: React.ReactNode,
         options?: MountOptions
-      ): Cypress.Chainable<MountReturn>;
+      ): Cypress.Chainable<MountReturn>
     }
   }
 }
@@ -144,10 +144,10 @@ declare global {
 <TabItem value='Vue'>
 
 ```ts
-import { mount } from "cypress/vue";
+import { mount } from 'cypress/vue'
 
-type MountParams = Parameters<typeof mount>;
-type OptionsParam = MountParams[1];
+type MountParams = Parameters<typeof mount>
+type OptionsParam = MountParams[1]
 
 declare global {
   namespace Cypress {
@@ -157,7 +157,7 @@ declare global {
        * @param component Vue Component or JSX Element to mount
        * @param options Options passed to Vue Test Utils
        */
-      mount(component: any, options?: OptionsParam): Chainable<any>;
+      mount(component: any, options?: OptionsParam): Chainable<any>
     }
   }
 }

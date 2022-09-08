@@ -18,7 +18,7 @@ end-to-end tests
 [device sizes](/api/commands/viewport), but also includes
 [visual regression tests](/guides/tooling/visual-testing), API tests, unit
 tests, and runs them all in an
-[efficient CI pipeline](https://dashboard.cypress.io/projects/7s5okt).
+[efficient CI pipeline](https://cloud.cypress.io/projects/7s5okt).
 
 The app is bundled with everything you need,
 [just clone the repository](https://github.com/cypress-io/cypress-realworld-app)

@@ -10,8 +10,8 @@ proxy:
 - Cypress won't be able to load web pages besides `localhost`.
 - Cypress won't be able to warn you if your
   [baseUrl](/guides/references/configuration#Global) isn't available.
-- Cypress won't be able to connect to the
-  [Dashboard Service](/guides/dashboard/introduction) to log in or record test
+- Cypress won't be able to connect to
+  [Cypress Cloud](/guides/cloud/introduction) to log in or record test
   runs.
 - `npm install cypress` may fail while downloading the Cypress binary.
 

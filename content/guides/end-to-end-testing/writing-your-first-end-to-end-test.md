@@ -449,7 +449,7 @@ These various timeouts are defined in the
 - Set up
   [intelligent code completion](/guides/tooling/IDE-integration#Intelligent-Code-Completion)
   for Cypress commands and assertions.
-- Record your test results to [the Dashboard](/guides/dashboard/introduction)
+- Record your test results to [Cypress Cloud](/guides/cloud/introduction)
   for advanced features like parallelization, flake detection, and more.
 - Check out the <Icon name="github"></Icon>
   [Cypress Real World App (RWA)](https://github.com/cypress-io/cypress-realworld-app)

@@ -56,14 +56,14 @@ Cypress can test anything that runs in a browser.
 Cypress consists of a free,
 [open source](https://github.com/cypress-io/cypress),
 [locally installed](/guides/getting-started/installing-cypress) application
-**and** a Dashboard Service for
-[recording your tests](/guides/dashboard/introduction).
+**and** Cypress Cloud for
+[recording your tests](/guides/cloud/introduction).
 
 - **_First:_** Cypress helps you set up and start writing tests every day while
   you build your application locally. _TDD at its best!_
 - **_Later:_** After building up a suite of tests and
   [integrating Cypress](/guides/continuous-integration/introduction) with your
-  CI Provider, our [Dashboard Service](/guides/dashboard/introduction) can
+  CI Provider, [Cypress Cloud](/guides/cloud/introduction) can
   record your test runs. You'll never have to wonder: _Why did this fail?_
 
 ## Our mission
@@ -239,7 +239,7 @@ end-to-end tests
 [device sizes](/api/commands/viewport), but also includes
 [visual regression tests](/guides/tooling/visual-testing), API tests, unit
 tests, and runs them all in an
-[efficient CI pipeline](https://dashboard.cypress.io/projects/7s5okt). Use the
+[efficient CI pipeline](https://cloud.cypress.io/projects/7s5okt). Use the
 RWA to **learn, experiment, tinker, and practice** web application testing with
 Cypress.
 

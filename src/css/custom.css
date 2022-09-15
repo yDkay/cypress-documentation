@@ -338,6 +338,10 @@ div.markdown h3 a:hover {
   opacity: 0.9;
 }
 
+.theme-doc-markdown.markdown h2 {
+  font-size: 32px;
+}
+
 .mediaGridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;

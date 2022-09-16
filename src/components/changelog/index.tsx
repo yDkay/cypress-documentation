@@ -1,6 +1,8 @@
 import React from 'react'
 import {usePluginData} from '@docusaurus/useGlobalData';
-const md = require('markdown-it')();
+
+const md = require('markdown-it')()
+.use( require("markdown-it-anchor").default )
 
 export default function Changelog() {
   const {changelogs} = usePluginData('changelog-data');  

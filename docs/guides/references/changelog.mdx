@@ -2,4 +2,10 @@
 title: Changelog
 ---
 
+<!-- Docusaurus has a few open issues with mdx and the TOC where the TOC doesn't parse/display dynamically like below without scanning the markdown directly. So we use the workaround noted here for now https://github.com/facebook/docusaurus/pull/5331 -->
+
+import Changelog, {toc as ChangelogTOC} from "@site/docs/guides/references/_changelog-list.mdx"
+
 <Changelog />
+
+export const toc = ChangelogTOC;

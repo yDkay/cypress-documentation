@@ -338,8 +338,10 @@ div.markdown h3 a:hover {
   opacity: 0.9;
 }
 
+/* generated changelog page headers */
 .theme-doc-markdown.markdown h2 {
   font-size: 32px;
+  scroll-margin-top: 80px;
 }
 
 .mediaGridContainer {

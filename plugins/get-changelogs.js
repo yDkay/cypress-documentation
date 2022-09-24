@@ -14,13 +14,30 @@ module.exports = async function getChangelogs(context, options) {
           const sortedChangelogs = changelogs.sort((a, b) => {
             return b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' });
           })
+          
+          // TODO: add logic to check file contents before writing
+          const latestRelease = fs.readFileSync(changelogListFile,
+          {encoding:'utf8'},
+          (err, data) => {
+            if (err)
+                console.log(err);
+            else {
+              const x = parseFloat(data.toString().slice(2, 10))
+              console.log(x)
+              // return x
+            }
+        });
+
+          // console.log('latestRelease', latestRelease)
 
           const data = []
             for (const file of sortedChangelogs) {
               // populate changelog list for TOC hack
-              // TODO: add logic to check file contents before writing
-              // const releaseNumHeader = `## ${file.slice(0, -3)}`+'\n';
-              // const toc = await fs.promises.appendFile(changelogListFile, releaseNumHeader)
+              const releaseNumHeader = `## ${file.slice(0, -3)}`+'\n';
+
+              if (latestRelease < '10.9.0') {
+                const toc = await fs.promises.prependFile(changelogListFile, '## 10.9.0')
+              }
 
               // read each changlelog file to get contents & store for consumption
               const changelogFile = path.join(changelogDir, file);
